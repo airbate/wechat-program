@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="header">
+    <text>高等数学刷题</text>
+  </view>
+  <view class="card">
+    <view class="card-title">今日推荐</view>
+    <view class="question-list">
+      <view wx:for="{{recommendQuestions}}" wx:key="id" class="question-item" bindtap="navigateToQuestion" data-id="{{item.id}}">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="stats">
+    <view class="stat-item">
+      <text>连续学习</text>
+      <text>{{stats.consecutiveDays}}天</text>
+    </view>
+    <view class="stat-item">
+      <text>正确率</text>
+      <text>{{stats.accuracy}}%</text>
+    </view>
+  </view>
+</view>

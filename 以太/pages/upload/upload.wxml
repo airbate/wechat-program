@@ -1,0 +1,35 @@
+<view class="container">
+  <form bindsubmit="submitQuestion">
+    <view class="form-item">
+      <text>题目内容</text>
+      <textarea name="content" placeholder="请输入题目内容" auto-height></textarea>
+    </view>
+    
+    <view class="form-item">
+      <text>题目类型</text>
+      <picker name="type" range="{{types}}">
+        <view>{{types[typeIndex]}}</view>
+      </picker>
+    </view>
+    
+    <view class="form-item">
+      <text>选项(选择题需要)</text>
+      <view wx:for="{{options}}" wx:key="index">
+        <input name="option{{index}}" placeholder="选项{{index+1}}" value="{{item}}"/>
+      </view>
+      <button bindtap="addOption">添加选项</button>
+    </view>
+    
+    <view class="form-item">
+      <text>正确答案</text>
+      <input name="answer" placeholder="请输入正确答案"/>
+    </view>
+    
+    <view class="form-item">
+      <text>题目解析</text>
+      <textarea name="solution" placeholder="请输入题目解析"></textarea>
+    </view>
+    
+    <button form-type="submit">提交题目</button>
+  </form>
+</view>

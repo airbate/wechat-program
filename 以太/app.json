@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/question/question",
+    "pages/analysis/analysis",
+    "pages/profile/profile",
+    "pages/upload/upload"
+  ],
+  "window": {
+    "navigationBarTitleText": "高等数学刷题",
+    "navigationBarBackgroundColor": "#1E88E5",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/question/question",
+        "text": "题库",
+        "iconPath": "images/question.png",
+        "selectedIconPath": "images/question-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-active.png"
+      }
+    ],
+    "color": "#999",
+    "selectedColor": "#1E88E5"
+  },
+  "usingComponents": {}
+}

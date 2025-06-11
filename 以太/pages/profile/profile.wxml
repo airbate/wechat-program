@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="user-info">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text class="username">{{userInfo.nickName}}</text>
+    <text class="level">Lv.{{userInfo.level}}</text>
+  </view>
+
+  <view class="stats-container">
+    <view class="stats-card">
+      <text class="stats-value">{{stats.totalQuestions}}</text>
+      <text class="stats-label">总刷题数</text>
+    </view>
+    <view class="stats-card">
+      <text class="stats-value">{{stats.accuracy}}%</text>
+      <text class="stats-label">正确率</text>
+    </view>
+    <view class="stats-card">
+      <text class="stats-value">{{stats.consecutiveDays}}</text>
+      <text class="stats-label">连续学习</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">我的成就</view>
+    <view class="badges">
+      <view wx:for="{{achievements}}" wx:key="id" class="badge-item {{item.unlocked ? 'unlocked' : 'locked'}}">
+        <image src="{{item.unlocked ? item.icon : '/images/locked-badge.png'}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">学习记录</view>
+    <view class="history-list">
+      <view wx:for="{{studyHistory}}" wx:key="date" class="history-item">
+        <text class="date">{{item.date}}</text>
+        <text class="count">{{item.count}}题</text>
+      </view>
+    </view>
+  </view>
+</view>

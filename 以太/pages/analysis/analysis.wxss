@@ -1,0 +1,79 @@
+.container {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.header {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #1E88E5;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 20rpx 0;
+  color: #333;
+  border-left: 8rpx solid #1E88E5;
+  padding-left: 15rpx;
+}
+
+.question-review,
+.solution-section,
+.knowledge-points,
+.recommendations {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.answer-status {
+  margin-top: 20rpx;
+  padding: 15rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.answer-status.correct {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+}
+
+.answer-status.wrong {
+  background-color: #FFEBEE;
+  color: #C62828;
+}
+
+.point-item {
+  margin-bottom: 15rpx;
+}
+
+.point-desc {
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 5rpx;
+}
+
+.recommend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.recommend-item:last-child {
+  border-bottom: none;
+}
+
+.difficulty {
+  font-size: 26rpx;
+  color: #FF9800;
+}
