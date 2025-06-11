@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">
+    <text>题目解析</text>
+  </view>
+
+  <view class="question-review">
+    <view class="section-title">原题回顾</view>
+    <rich-text nodes="{{question.content}}"></rich-text>
+    <view class="answer-status {{isCorrect ? 'correct' : 'wrong'}}">
+      <text>{{isCorrect ? '回答正确' : '回答错误'}}</text>
+    </view>
+  </view>
+
+  <view class="solution-section">
+    <view class="section-title">详细解析</view>
+    <rich-text nodes="{{question.solution}}"></rich-text>
+  </view>
+
+  <view class="knowledge-points">
+    <view class="section-title">知识点</view>
+    <view wx:for="{{knowledgePoints}}" wx:key="id" class="point-item">
+      <text>{{item.name}}</text>
+      <text class="point-desc">{{item.description}}</text>
+    </view>
+  </view>
+
+  <view class="recommendations">
+    <view class="section-title">推荐练习</view>
+    <view wx:for="{{recommendedQuestions}}" wx:key="id" class="recommend-item" bindtap="navigateToQuestion" data-id="{{item.id}}">
+      <text>{{item.title}}</text>
+      <text class="difficulty">{{item.difficulty}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+.container {
+  padding: 20rpx;
+}
+
+.form-item {
+  margin-bottom: 30rpx;
+}
+
+.form-item text {
+  display: block;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+textarea, input {
+  width: 100%;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 150rpx;
+}
+
+button {
+  margin-top: 40rpx;
+}

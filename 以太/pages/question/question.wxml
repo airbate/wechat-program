@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="question-container">
+    <view class="question-header">
+      <text>题目 {{currentIndex + 1}}/{{totalQuestions}}</text>
+      <text class="difficulty">{{difficultyText}}</text>
+    </view>
+    <view class="question-content">
+      <rich-text nodes="{{question.content}}"></rich-text>
+    </view>
+  </view>
+
+  <view class="answer-container">
+    <block wx:if="{{question.type === 'choice'}}">
+      <radio-group bindchange="onAnswerChange">
+        <label wx:for="{{question.options}}" wx:key="id" class="option-item">
+          <radio value="{{item.id}}" checked="{{selectedAnswer === item.id}}"/>
+          <text>{{item.text}}</text>
+        </label>
+      </radio-group>
+    </block>
+
+    <block wx:if="{{question.type === 'fill'}}">
+      <input type="text" placeholder="请输入答案" bindinput="onInputAnswer"/>
+    </block>
+  </view>
+
+  <view class="action-buttons">
+    <button type="primary" bindtap="submitAnswer">提交答案</button>
+    <button bindtap="showSolution">查看解析</button>
+  </view>
+
+  <view class="solution-container" wx:if="{{showSolution}}">
+    <view class="solution-title">题目解析</view>
+    <rich-text nodes="{{question.solution}}"></rich-text>
+  </view>
+</view>
